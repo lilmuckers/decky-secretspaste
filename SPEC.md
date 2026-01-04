@@ -141,6 +141,7 @@ Stored in `config.json` under the plugin data directory:
 Settings:
 - Clipboard clear timeout (seconds), default 20, range 3–180
 - Backend choice: gopass or local encrypted; optional local unlock password
+- Optional CLI helper for SSH use to add secrets without exposing values in shell history (see backend/cli_add_secret.py)
 
 ---
 

@@ -40,6 +40,23 @@ Decky plugin that lets you keep sensitive snippets encrypted via gopass or a bui
 4. To test in Decky, copy or symlink the project (or `dist/`) into your Decky plugins folder (e.g. `~/homebrew/plugins/SecretsPaste`) and reload DeckyLoader. Ensure `gopass` works on the Deck.
 5. Backend Python dependency is listed in `backend/requirements.txt` (cryptography); Decky packaging installs it, but if running manually ensure it is available.
 
+## Testing
+
+- Install dev deps: `pip install -r backend/requirements-dev.txt`
+- Run backend unit tests from the `backend/` directory: `pytest`
+
+## CLI (SSH-friendly)
+
+- To add a secret via SSH without exposing it in shell history, use the CLI helper:
+  ```bash
+  cd backend
+  python3 cli_add_secret.py  # prompts for backend (config), name, and secret via getpass
+  ```
+- Flags:
+  - `--backend {gopass,local}` to override current backend
+  - `--unlock <password>` to unlock a password-protected local vault
+  - `--settings-dir <path>` to point at a custom plugin data directory (defaults to Decky’s path)
+
 ## Specification
 
 See `SPEC.md` for a high-level overview of architecture, backends, and expected behaviours.
