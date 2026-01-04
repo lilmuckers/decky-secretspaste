@@ -1,0 +1,9 @@
+{
+  "name": "SecretsPaste",
+  "author": "Patrick McKinley",
+  "flags": ["debug"],
+  "publish": {
+    "tags": ["utility", "security", "clipboard"],
+    "description": "Store sensitive snippets in gopass and copy them with an auto-clearing clipboard."
+  }
+}

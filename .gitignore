@@ -1,0 +1,11 @@
+.DS_Store
+node_modules
+dist
+*.log
+*.tgz
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+__pycache__
+*.pyc
+*.pyo

@@ -1,0 +1,34 @@
+{
+  "name": "decky-secretspaste",
+  "version": "0.1.0",
+  "description": "Decky plugin that stores secrets encrypted on disk and copies them to the clipboard with an auto-wipe timer.",
+  "scripts": {
+    "build": "shx rm -rf dist && shx mkdir -p dist && shx cp -r backend dist && rollup -c",
+    "watch": "shx rm -rf dist && shx mkdir -p dist && shx cp -r backend dist && rollup -c -w",
+    "lint": "eslint src --ext .ts,.tsx",
+    "format": "prettier --write src",
+    "check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-replace": "^5.0.5",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@types/react": "^18.2.55",
+    "@types/react-dom": "^18.2.19",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-react": "^7.33.2",
+    "prettier": "^3.2.5",
+    "rollup": "^4.12.0",
+    "rollup-plugin-import-css": "^3.3.1",
+    "shx": "^0.3.4",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "decky-frontend-lib": "github:SteamDeckHomebrew/decky-frontend-lib#v3.26",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
